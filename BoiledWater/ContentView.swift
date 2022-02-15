@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var B = Int.random(in: 80...120)
+    var P : Int{
+        return 5 * B - 400
+    }
+   
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack{
+            Text("What is the current atmospheric pressure when the temperature is \(B)ºC?")
+            
+        }
+        Divider()
+            
     }
 }
 
