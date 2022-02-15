@@ -9,17 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     @State var B = Int.random(in: 80...120)
+    
+    
     var P : Int{
         return 5 * B - 400
     }
+    var feedback: String{
+        switch P {
+        case 0...100:
+            return "It's above the sea level"
+        default:
+            return "It's below the sea level"
+        }
+            
+        
+    }
+    
    
     var body: some View {
-        HStack{
-            Text("What is the current atmospheric pressure when the temperature is \(B)ºC?")
-            
+        VStack{
+            HStack{
+             Text("Temperature")
+                    .bold()
+                    Spacer()
+                
+            }
         }
-        Divider()
-            
+                
     }
 }
 
